@@ -1,0 +1,19 @@
+{
+	"name": "PubServer",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"start": "node ./src/server.js"
+	},
+	"dependencies": {
+		"jasmine-node": "",
+		"request": "",
+		"express": "",
+		"body-parser": "~1.18.2",
+		"cookie-parser": "~1.4.3",
+		"debug": "~2.6.9",
+		"jade": "~1.11.0",
+		"morgan": "~1.9.0",
+		"serve-favicon": "~2.4.5"
+	}
+}

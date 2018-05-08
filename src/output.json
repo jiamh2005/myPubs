@@ -1,0 +1,11 @@
+｛
+	"name": "PubServer",
+	"version": "0.1.0",
+	"servers":{
+		"userName": "Anonymous",
+		"services": [
+			{"serviceName":"ownCloud", "protocol":"https", "ip":"127.0.0.1", "port":"8080"},
+			{"serviceName":"WIKI", "protocol":"http", "ip":"127.0.0.1", "port":"80"}
+		]
+	}
+｝
