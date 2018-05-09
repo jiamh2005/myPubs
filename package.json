@@ -10,12 +10,15 @@
 		"cookie-parser": "~1.4.3",
 		"debug": "~2.6.9",
 		"express": "",
+		"express-session": "",
+		"express-flash": "",
 		"jade": "~1.11.0",
 		"jasmine-node": "",
 		"morgan": "~1.9.0",
 		"npm": "^6.0.0",
 		"request": "",
 		"passport": "",
+		"passport-local": "",
 		"serve-favicon": "~2.4.5"
 	}
 }

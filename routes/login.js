@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  var html = "<h2>你好, " + req.user.username + "</h2><a href='/logout'>退出</a>";
-  res.send(html);
+  res.render('login', { title: 'PubServer 0.1 login' });
 });
 
 module.exports = router;
