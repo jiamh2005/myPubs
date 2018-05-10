@@ -1,14 +1,50 @@
-extends layout
+extends layout-login
 
 block content
-  h1= title
+  // - LOGO
+  div.logo
+    a(href="/")
+      img(src="/pages/img/logo-big-mypubs.png" alt="")
+  // - LOGIN
+  div.content
+    // - BEGIN LOGIN FORM
+    form(class="login-form" action="/login" method="post")
+        h3.form-title Login to your account
+        div.alert.alert-danger.display-hide
+            button.close(data-close="alert")
+            span Enter any username and password.
 
-  form(action="/login",method="post")
-    div
-      label Username:
-      input(type="text",name="username")
-    div
-      label Password:
-      input(type="password", name="password")
-    div
-      input(type="submit", value="Log In")
+        div.form-group
+            // - ie8, ie9 does not support html5 placeholder, so we just show field title for that
+            label.control-label.visible-ie8.visible-ie9 Username
+            div.input-icon
+                i.fa.fa-user
+                input.form-control.placeholder-no-fix(type="text" autocomplete="off" placeholder="Username" name="username")
+
+        div.form-group
+            label.control-label.visible-ie8.visible-ie9 Password
+            div.input-icon
+                i.fa.fa-lock
+                input.form-control.placeholder-no-fix(type="password" autocomplete="off" placeholder="Password" name="password")
+
+
+        div.form-actions
+          label.rememberme.mt-checkbox.mt-checkbox-outline
+            input(type="checkbox" name="remember" value="1")
+            |Remember me
+            span
+          button(type="submit" class="btn green pull-right") Login
+
+        div.login-options
+          h4 Or login with
+          ul.social-icons
+            li
+              a.facebook(data-original-title="facebook" href="javascript:;")
+            li
+              a.twitter(data-original-title="Twitter" href="javascript:;")
+
+            li
+              a.googleplus(data-original-title="Goole Plus" href="javascript:;")
+
+            li
+              a.linkedin(data-original-title="Linkedin" href="javascript:;")

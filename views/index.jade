@@ -1,9 +1,70 @@
 extends layout
 
 block content
-	h1= title
-	#myDiv
-		h2 等待服务器回馈。。。
-	button(type="button")#b01 刷新
+	header.page-header
+		nav.navbar(role="navigation")
+			.container-fluid
+						.havbar-header
+								// BEGIN LOGO
+								a#index.navbar-brand(href="start.html")
+										img(src="/layout6/img/logo.png" alt="Logo")
+								// BEGIN TOPBAR ACTIONS
+								.topbar-actions
+										// DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box
+										form.search-form(action="extra_search.html" method="GET")
+												.input-group
+														input.form-control(type="text"  placeholder="Search here" name="query")
+														span.input-group-btn
+																a.btn.md-skip.submit(href="javascript:;")
+																		i.fa.fa-search
+
+										.btn-group-img.btn-group
+												button.btn.btn-sm.dropdown-toggle(type="button"  data-toggle="dropdown" data-hover="dropdown" data-close-others="true")
+														img( src="/layout6/img/avatar1.jpg" alt="")
+												ul.dropdown-menu-v2(role="menu")
+														li
+																a(href="page_user_profile_1.html")
+																		i.icon-user
+																		|My Profile
+																		span.badge.badge-danger 1
+
+														li
+																a(href="app_todo_2.html")
+																		i.icon-rocket
+																		| My Tasks
+																		span.badge.badge-success 7
+
+
+	.container-fluid
+		.page-content.page-content-popup
+			.page-content-fixed-header
+				// - BEGIN BREADCRUMBS
+				ul.page-breadcrumb
+					li
+						a(href="#") Dashboard
+						li= title
+			.page-content
+				// - BEGIN PAGE BASE CONTENT
+				#myDiv.row
+					h2 等待服务器回馈。。。
+
+
 block footer
-	script(type="text/javascript" src="/main/home.js") 
+	script(type="text/javascript" src="/main/home.js")
+	// - BEGIN CORE PLUGINS
+	script(src="/plugins/jquery.min.js" type="text/javascript")
+	script(src="/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript")
+	script(src="/plugins/js.cookie.min.js" type="text/javascript")
+	script(src="/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript")
+	script(src="/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript")
+	script(src="/plugins/jquery.blockui.min.js" type="text/javascript")
+	script(src="/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript")
+
+	// - BEGIN THEME GLOBAL SCRIPTS
+	script(src="/scripts/app.min.js" type="text/javascript")
+
+	// - BEGIN PAGE LEVEL SCRIPTS
+	script(src="/pages/scripts/dashboard.min.js" type="text/javascript")
+
+	// - BEGIN THEME LAYOUT SCRIPTS
+	script(src="/layout6/scripts/layout.min.js" type="text/javascript")

@@ -40,7 +40,7 @@ app.use(cookieParser());
 app.use(session({
 	resave:false,//添加这行
 	saveUninitialized: true,//添加这行
-	secret: 'blog.fens.me', cookie: { maxAge: 60000 }}));
+	secret: 'jiamh2005', cookie: { maxAge: 6000000 }}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash())
@@ -82,8 +82,8 @@ passport.deserializeUser(function (user, done) {//删除user对象
 // 认证页面
 app.post('/login',
     passport.authenticate('local', {
-        successRedirect: '/users',
-        failureRedirect: '/'
+        successRedirect: '/',
+        failureRedirect: '/login'
     }));
 
 app.get('/logout', function (req, res) {
